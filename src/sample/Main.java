@@ -32,7 +32,7 @@ public class Main extends Application {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
 
-            }
+            }   
         });
 
         root.setOnMouseDragged(new EventHandler<MouseEvent>() {
