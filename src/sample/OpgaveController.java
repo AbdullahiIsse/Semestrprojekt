@@ -51,14 +51,10 @@ public class OpgaveController implements Initializable {
     private TableColumn<Opgaver, String> prioritetsniveau;
     private Window primaryStage;
 
-
-
     public ObservableList<Opgaver> Opgaveliste = FXCollections.observableArrayList(
             new Opgaver("tom", "ben", 12345678, "Høj"),
             new Opgaver("tom", "ben", 12345678, "lav")
     );
-
-
 
     public void initialize(URL location, ResourceBundle rb) {
         opgavetekst.setCellValueFactory(new PropertyValueFactory<Opgaver, String>("Opgavetekst"));
@@ -73,7 +69,6 @@ public class OpgaveController implements Initializable {
         prioritetsniveau.setCellFactory(TextFieldTableCell.forTableColumn());
 
     }
-
 
     public void OneditOpgavetekst(TableColumn.CellEditEvent<Opgaver, String> opgaverStringCellEditEvent) {
         Opgaver opgave=tableViewOpgaver.getSelectionModel().getSelectedItem();
@@ -120,13 +115,9 @@ public class OpgaveController implements Initializable {
     }
 
     public void save(ActionEvent  opgaven ) {
-
         FileChooser fileChooser = new FileChooser();
-
-
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XMl files (*.xml)", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);
-
 
         File file = fileChooser.showSaveDialog(primaryStage);
 
@@ -145,12 +136,6 @@ public class OpgaveController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(Opgaver.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-
-
-
-
-
     }
 }
 

@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
@@ -27,11 +28,9 @@ public class Scrummaster {
 
        AnchorPane pane = FXMLLoader.load(getClass().getResource("gui/kun.fxml"));
         rootpane.getChildren().setAll(pane);
-
     }
 
     public void opgave(ActionEvent actionEvent) throws IOException {
-
        AnchorPane pane = FXMLLoader.load(getClass().getResource(
                 "gui/opgaver.fxml"));
         rootpane.getChildren().setAll(pane);
@@ -48,9 +47,7 @@ public class Scrummaster {
 
        System.exit(0);
 
-
     }
-
 
     public void mousedragged(MouseEvent mouseEvent) throws InterruptedException {
 
@@ -58,6 +55,5 @@ public class Scrummaster {
                .title("Color IT")
                .text("SE VORES HJEMMESIDE FOR MERE INFO").darkStyle().showWarning();
     }
-
 
 }
