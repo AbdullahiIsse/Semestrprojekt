@@ -1,4 +1,4 @@
-package sample;
+package Teammedlem;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -66,10 +66,6 @@ public class TeamMedlemController implements Initializable {
     }
 
     public ObservableList<Teammedlem> list = FXCollections.observableArrayList(
-            new Teammedlem("tom", "ben", "hej", 10, 200),
-            new Teammedlem("tom", "ben", "hej", 10, 200),
-            new Teammedlem("tom", "ben", "hej", 10, 200),
-            new Teammedlem("tom", "ben", "hej", 10, 200)
     );
 
     public void initialize(URL location, ResourceBundle rb) {
