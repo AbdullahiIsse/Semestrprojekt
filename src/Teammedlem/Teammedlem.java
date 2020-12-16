@@ -1,4 +1,4 @@
-package sample.metoder;
+package Teammedlem;
 
 public class Teammedlem
 {
@@ -62,5 +62,9 @@ public class Teammedlem
             ", Telefonnummer=" + Telefonnummer +
             ", TeammedlemId=" + TeammedlemId +
             '}';
+  }
+  public String toxmll(){
+    return "<Teamedlem><fornavn>" + Fornavn + "</fornavn>" + "<efternavn>"+ Efternavn + "</efternavn>" + "<Rolle>" + Rolle + "</rolle>" + "<Telefonnummer>" + Telefonnummer + "</Telefonnummer>" + "<Teammedlemid>" + TeammedlemId + "</tea>";
+
   }
 }

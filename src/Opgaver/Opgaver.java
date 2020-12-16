@@ -1,4 +1,4 @@
-package sample.metoder;
+package Opgaver;
 
 public class Opgaver {
     private String opgavetekst;
@@ -43,5 +43,15 @@ public class Opgaver {
 
     public void setPrioritetsniveau(String prioritetsniveau) {
         this.prioritetsniveau = prioritetsniveau;
+    }
+
+    @Override
+    public String toString() {
+        return "Opgaver{" +
+                "opgavetekst='" + opgavetekst + '\'' +
+                ", krav='" + krav + '\'' +
+                ", estimat=" + estimat +
+                ", prioritetsniveau='" + prioritetsniveau + '\'' +
+                '}';
     }
 }

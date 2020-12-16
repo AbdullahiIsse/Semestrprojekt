@@ -1,4 +1,4 @@
-package sample;
+package Kunder;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,7 +7,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -18,9 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
-import sample.metoder.Kunde;
-import sample.metoder.Opgaver;
-import sample.metoder.Teammedlem;
 
 
 import java.io.File;
@@ -36,6 +32,8 @@ public class KundeController implements Initializable {
     public TextField fornavn1;
     public TextField efternavn1;
     public TextField telefonnummer1;
+
+    public TextField kundeID1;
     @FXML
     private AnchorPane rootpane;
 
@@ -43,7 +41,9 @@ public class KundeController implements Initializable {
     @FXML private TableColumn<Kunde,String>Fornavn;
     @FXML private TableColumn<Kunde,String>Efternavn;
     @FXML private TableColumn<Kunde, Integer> Telefonnummer;
+    @FXML private TableColumn<Kunde, Integer> kundeId1;
     private Window primaryStage;
+
 
 
     public void loadback(ActionEvent actionEvent) throws IOException {
@@ -58,11 +58,6 @@ public class KundeController implements Initializable {
     }
 
     public ObservableList<Kunde>list = FXCollections.observableArrayList(
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678),
-            new Kunde("tom","ben", 12345678)
-
     );
 
     public void initialize(URL location, ResourceBundle rb){
@@ -107,7 +102,7 @@ public class KundeController implements Initializable {
     }
 
     public void Add(ActionEvent actionEvent) {
-        Kunde kunde = new Kunde(fornavn1.getText(), efternavn1.getText(),Integer.parseInt(telefonnummer1.getText()));
+        Kunde kunde = new Kunde(fornavn1.getText(), efternavn1.getText(),Integer.parseInt(telefonnummer1.getText()),Integer.parseInt(kundeId1.getText()));
         table.getItems().add(kunde);
     }
 

@@ -1,16 +1,13 @@
-package sample;
+package GUI;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import sample.metoder.Kunde;
 
 public class Main extends Application {
     private double xOffset = 0;
@@ -18,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("XML/sample.fxml"));
         primaryStage.setTitle("Colour IT");
         primaryStage.setScene(new Scene(root, 820, 400));
         primaryStage.setResizable(false);
@@ -32,7 +29,7 @@ public class Main extends Application {
                 xOffset = event.getSceneX();
                 yOffset = event.getSceneY();
 
-            }
+            }   
         });
 
         root.setOnMouseDragged(new EventHandler<MouseEvent>() {
