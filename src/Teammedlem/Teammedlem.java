@@ -1,4 +1,4 @@
-package sample.metoder;
+package Teammedlem;
 
 public class Teammedlem
 {

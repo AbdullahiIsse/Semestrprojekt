@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -15,21 +14,14 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
 import parser.ParserException;
-import parser.XmlJsonParser;
-import sample.metoder.Opgaver;
-import sample.metoder.Teammedlem;
 
-import javax.crypto.Mac;
-import javax.swing.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Files;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -161,7 +153,7 @@ public class TeamMedlemController implements Initializable {
 
     }
 
-    private void SaveFile(sample.metoder.Teammedlem teammedlem, File file) {
+    private void SaveFile(Teammedlem teammedlem, File file) {
 
 
         try {

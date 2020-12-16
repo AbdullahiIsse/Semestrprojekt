@@ -1,4 +1,4 @@
-package sample;
+package GUI;
 
 import javafx.application.Application;
 import javafx.event.EventHandler;
@@ -15,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("gui/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("XML/sample.fxml"));
         primaryStage.setTitle("Colour IT");
         primaryStage.setScene(new Scene(root, 820, 400));
         primaryStage.setResizable(false);

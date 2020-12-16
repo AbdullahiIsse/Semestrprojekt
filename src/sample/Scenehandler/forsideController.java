@@ -1,4 +1,4 @@
-package sample;
+package sample.Scenehandler;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,20 +15,20 @@ public class forsideController {
 
 
     public void load1(javafx.event.ActionEvent actionEvent) throws IOException {
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("gui/kun.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("XML/kun.fxml"));
         rootpane.getChildren().setAll(pane);
     }
 
 
     public void load2(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/team.fxml"));
+                "XML/team.fxml"));
         rootpane.getChildren().setAll(pane);
     }
 
     public void load3(ActionEvent actionEvent) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/opgaver.fxml"));
+                "XML/opgaver.fxml"));
         rootpane.getChildren().setAll(pane);
     }
 
@@ -36,7 +36,7 @@ public class forsideController {
     public void load4(ActionEvent actionEvent) throws IOException, InterruptedException {
 
         AnchorPane pane = FXMLLoader.load(getClass().getResource(
-                "gui/Scrummaster.fxml"));
+                "XML/Scrummaster.fxml"));
         rootpane.getChildren().setAll(pane);
 
 

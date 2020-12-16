@@ -17,7 +17,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
 import javafx.util.converter.IntegerStringConverter;
-import sample.metoder.Opgaver;
 
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package sample.metoder;
+package Opgaver;
 
 public class Opgaver {
     private String opgavetekst;
